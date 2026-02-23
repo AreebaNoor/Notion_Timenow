@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Now</title>
+    <style> 
+        @font-face {
+            font-family: Garges;
+            src: url("./Media/Garges.ttf")
+        }
+    </style>
+</head>
+<body>
+    <div id="timeDiv">Heyy</div>
+
+    <script> 
+        let timeDivEl = document.getElementById("timeDiv");
+        timeDivEl.style.fontFamily = "Garges";
+        timeDivEl.style.fontSize = "60px";
+        timeDivEl.style.padding = "10px";
+        timeDivEl.style.backgroundColor = "#d9d9d9";
+        timeDivEl.style.borderRadius = "5px";
+        timeDivEl.style.display = "flex";
+        timeDivEl.style.justifyContent = "center";
+
+
+        let now = new Date;
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+
+        timeDivEl.innerHTML = `${hours} : ${minutes}`;
+    </script>
+</body>
+</html>
